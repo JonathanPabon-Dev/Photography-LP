@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
+  --fw-normal: 400;
   --fw-medium: 500;
   --fw-semibold: 600;
   --fw-bold: 700;
   --tc-w: #fff;
+  --tc-w80: #ffffffcc;
   --tc-primary: #1a093c;
   --tc-primary-o80: #1a093ccc;
   --tc-secondary: #787282;
@@ -27,10 +29,13 @@ body {
   color: var(--tc-primary);
 }
 
-.header,
-.main,
-.footer {
+.main {
   padding: 0 130px;
+}
+
+.header,
+.footer {
+  padding: 20px 130px;
 }
 
 a {
@@ -99,14 +104,14 @@ button {
 .hero,
 .about,
 .cualities,
-.projects,
-.flowers,
-.works {
+.projects {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.section {
   margin-top: 100px;
-  padding: 60px 0;
 }
 
 .hero-info {
@@ -130,27 +135,27 @@ button {
   width: 260px;
   height: 80px;
   border-radius: 50px;
+  border: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0px 4px 4px 0px var(--bsc-primary-o25);
 }
 
-.git-btn > p {
+.git-text {
   color: var(--tc-w);
   font-size: 20px;
   font-weight: var(--fw-medium);
   margin-right: 8px;
 }
 
-.git-btn > span {
-  font-size: 25px;
+.git-btn-icon {
   width: 30px;
   height: 30px;
   background-color: var(--bgc-secondary-o35);
   border-radius: 50%;
-  align-items: center;
   color: var(--tc-w);
+  font-size: 25px;
 }
 
 .hero-grid {
@@ -341,7 +346,181 @@ button {
 }
 
 .measure-value {
-    font-size: 40px;
-    font-weight: var(--fw-bold);
-    line-height: 1.25;
+  font-size: 40px;
+  font-weight: var(--fw-bold);
+  line-height: 1.25;
+}
+
+.flowers {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.flowers-title {
+  width: 570px;
+  font-size: 48px;
+  line-height: 1.25;
+  font-weight: var(--fw-bold);
+}
+
+.flowers-text {
+  width: 400px;
+  font-size: 18px;
+  color: #1a093ccc;
+  margin: 20px 0 40px;
+}
+
+.flowers-grid {
+  position: relative;
+  display: flex;
+  margin-top: 80px;
+  height: 480px;
+}
+
+.flowers-grid-item {
+  position: absolute;
+}
+
+.flowers-grid-item:nth-child(2) {
+  left: 440px;
+  top: -160px;
+}
+
+.flowers-grid-item:nth-child(3) {
+  left: 880px;
+  top: -320px;
+}
+
+.flowers-order {
+  color: #1a093ccc;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.flowers-order-big {
+  color: #1a093c;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.flowers-progress {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 480px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  border-radius: 20px;
+  border: 2.5px solid #0000001a;
+  background: #fff;
+}
+
+.flowers-progress .progress {
+  width: 262px;
+  height: 3px;
+}
+
+.flowers-progress-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.works {
+  display: flex;
+  flex-direction: column;
+}
+
+.works-title {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.works-subtitle {
+  margin: 20px 0 40px;
+  font-size: 25px;
+  font-weight: var(--fw-normal);
+  color: #000000bf;
+}
+
+.works-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.works-grid-item {
+  border-radius: 20px;
+}
+
+.gs-container {
+  position: relative;
+  background-color: #431898;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  padding: 140px 100px;
+}
+
+.gs-title {
+  font-size: 64px;
+  font-weight: 600;
+  color: var(--tc-w);
+}
+
+.gs-text {
+  color: var(--tc-w80);
+  font-size: 18px;
+  margin: 30px 0 60px;
+  width: 635px;
+}
+
+.gs-img {
+  position: absolute;
+  left: 730px;
+  top: -90px;
+}
+
+.gs-btn {
+  background-color: var(--tc-w);
+  width: 260px;
+  height: 80px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gs-btn-text {
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.gs-btn-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #00000080;
+  border-radius: 50%;
+  color: var(--tc-w);
+  font-size: 25px;
+}
+
+.footer {
+  margin-top: 100px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.credits {
+  font-size: 20px;
+  color: #3c3842;
+  font-weight: 600;
 }
